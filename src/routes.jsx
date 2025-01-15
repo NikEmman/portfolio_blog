@@ -1,7 +1,6 @@
 import App from "./App";
 import ErrorPage from "./ErrorPage";
-import { LandingPage } from "./LandingPage";
-
+import LandingPage from "./LandingPage";
 const routes = [
   {
     path: "/",
