@@ -6,15 +6,20 @@
       defer
       src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"
     ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css"
+    />
     <script defer src="./assets/js/loadPosts.js"></script>
   </head>
   <body>
     <h1>Welcome to My Blog</h1>
     <a href="index.html">Back to Portfolio</a>
-    <div id="posts"></div>
-
-    <script>
-      loadPosts();
-    </script>
+    <div id="posts">Loading posts...</div>
   </body>
 </html>

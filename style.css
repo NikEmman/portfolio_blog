@@ -1,0 +1,62 @@
+/* blog styles */
+.post {
+  margin: 2em 0;
+  padding: 1em;
+  border-bottom: 1px solid #eee;
+}
+.post:last-child {
+  border-bottom: none;
+}
+.read-more {
+  display: inline-block;
+  margin-top: 1em;
+  color: #0066cc;
+  text-decoration: none;
+}
+.read-more:hover {
+  text-decoration: underline;
+}
+/* Style for code blocks */
+pre {
+  padding: 1em;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+code {
+  font-family: "Consolas", "Monaco", monospace;
+}
+
+/* post styles */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2em;
+}
+.back-link {
+  display: block;
+  margin: 2em 0;
+  color: #0066cc;
+  text-decoration: none;
+}
+.back-link:hover {
+  text-decoration: underline;
+}
+pre {
+  background-color: #1e1e1e;
+  padding: 1em;
+  border-radius: 5px;
+  overflow-x: auto;
+  margin: 1em 0;
+}
+pre code {
+  font-family: "Consolas", "Monaco", "Courier New", monospace;
+  font-size: 14px;
+  line-height: 1.5;
+}
+/* Style inline code differently from code blocks */
+:not(pre) > code {
+  background-color: #f0f0f0;
+  padding: 2px 4px;
+  border-radius: 3px;
+  color: #e83e8c;
+}
