@@ -1,4 +1,3 @@
-/* blog styles */
 .post {
   margin: 2em 0;
   padding: 1em;
@@ -15,9 +14,32 @@
 }
 .read-more:hover {
   text-decoration: underline;
-  cursor: pointer;
 }
 /* Style for code blocks */
+pre {
+  padding: 1em;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+code {
+  font-family: "Consolas", "Monaco", monospace;
+}
+
+/* post styles */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2em;
+}
+.back-link {
+  display: block;
+  margin: 2em 0;
+  color: #0066cc;
+  text-decoration: none;
+}
+.back-link:hover {
+  text-decoration: underline;
+}
 pre {
   background-color: #1e1e1e;
   padding: 1em;
@@ -25,8 +47,18 @@ pre {
   overflow-x: auto;
   margin: 1em 0;
 }
-code {
-  font-family: "Consolas", "Monaco", monospace;
+pre code {
+  font-family: "Consolas", "Monaco", "Courier New", monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #0e92b3;
+}
+/* Style inline code differently from code blocks */
+:not(pre) > code {
+  background-color: #f0f0f0;
+  padding: 2px 4px;
+  border-radius: 3px;
+  color: #e83e8c;
 }
 
 /* post styles */
