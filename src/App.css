@@ -15,6 +15,7 @@
 }
 .read-more:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
 /* Style for code blocks */
 pre {
@@ -54,4 +55,21 @@ pre code {
   padding: 2px 4px;
   border-radius: 3px;
   color: #e83e8c;
+}
+/* techStack styles */
+.ruby:hover {
+  text-shadow: 0 0 20px #d34d4d, 0 0 30px #c52525, 0 0 40px #e60c0c,
+    0 0 50px#cc0000;
+  color: #cc0000;
+}
+
+.javascript:hover {
+  text-shadow: 0 0 20px #d3b44d, 0 0 30px rgb(238, 238, 88),
+    0 0 40px rgb(248, 248, 59), 0 0 50px yellow;
+  color: rgb(238, 101, 10);
+}
+.react:hover {
+  text-shadow: 0 0 20px #5ac1db, 0 0 30px #3fb5d3, 0 0 40px #0e92b3,
+    0 0 50px#016983;
+  color: #016983;
 }

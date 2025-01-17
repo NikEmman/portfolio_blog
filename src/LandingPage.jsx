@@ -10,7 +10,7 @@ const LandingPage = () => {
       </section>
       <section className="tech">
         <p className="ruby">Ruby</p> <p className="ruby">Ruby on Rails</p>
-        <p className="js">JavaScript</p> <p className="react">React</p>
+        <p className="javascript">JavaScript</p> <p className="react">React</p>
       </section>
       <section className="projects"></section>
       <div className="contact">
