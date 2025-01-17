@@ -1,4 +1,5 @@
 import App from "./App";
+import Blog from "./Blog";
 import ErrorPage from "./ErrorPage";
 import LandingPage from "./LandingPage";
 const routes = [
@@ -11,10 +12,10 @@ const routes = [
         path: "/",
         element: <LandingPage />,
       },
-      // {
-      //   path: "/signup",
-      //   element: <SignUp />,
-      // },
+      {
+        path: "/blog",
+        element: <Blog />,
+      },
       // {
       //   path: "/profile/:id",
       //   element: <Profile />,

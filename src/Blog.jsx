@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 const Blog = () => {
   return (
     <>
       <h1>Welcome to My Blog</h1>
-      <a href="index.html">Back to Portfolio</a>
+      <Link to="/">Back to Portfolio</Link>
       <div id="posts">Loading posts...</div>
     </>
   );
