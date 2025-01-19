@@ -27,7 +27,7 @@ const Blog = () => {
       try {
         const response = await fetch("/_posts/index.txt");
         const text = await response.text();
-        const fileNames = text.trim().split("\n");
+        const fileNames = text.trim().split("\n").reverse();
         const postPromises = fileNames.map(async (fileName) => {
           const postResponse = await fetch(`/_posts/${fileName}`);
           const content = await postResponse.text();
