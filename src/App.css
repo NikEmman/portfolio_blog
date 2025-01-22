@@ -1,27 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-
 /* General styles */
-* {
-  margin: 0;
-  padding: 0;
-}
+
 body {
   position: relative;
-  background-color: #c5c9ca;
-  font-family: "Roboto", serif;
 }
-.root {
-  min-height: 100vh;
+.App {
+  width: 100%;
+  transition: background-color 250ms ease-in-out;
+  background-color: var(--background-color);
+  color: var(--primary-text-color);
 }
 a {
   text-decoration: none;
-  color: rgb(221, 164, 42);
+  color: var(--secondary-text-color);
 }
 
 /* NavBar */
 nav {
   padding: 1em;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid var(--primary-text-color);
   position: sticky;
 }
 nav ul {
@@ -33,7 +29,7 @@ nav li {
   list-style: none;
 }
 nav a {
-  background-color: black;
+  background-color: var(--foreground-color);
   font-size: larger;
   padding: 1em;
   padding-left: 2em;

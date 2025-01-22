@@ -1,7 +1,10 @@
-## Nick the Web Dev, Origins (part 2)
+## Web Dev Origins Story (part 2)
 
+\
+\
 _Deus ex machina_
-
+\
+\
 As my shifts left me with no standard time to attend a boot camp, I found out about [The Odin Project](https://www.theodinproject.com/). It is a fully fledged open source curriculum, designed to help people become web devs. So around September of 2023, my journey at the hands of Odin begun.
 \
 \
@@ -10,13 +13,11 @@ It taught me HTML, CSS, some JavaScript and then moved on to the wonderful Ruby 
 \
 \
 \
-Here was that feeling again! The world was mine!
+Here was that feeling again! **_The world was mine_**!
 \
 \
 \
-
-### The world was actually not mine.
-
+ The world was actually not mine.
 \
 \
 \
