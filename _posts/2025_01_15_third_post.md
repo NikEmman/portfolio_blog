@@ -21,4 +21,4 @@ Here was that feeling again! **_The world was mine_**!
 \
 \
 \
-I started sending my first applications at that point, but I soon found out how premature that was. After a another round of low, reality sunk in, back to the lessons, more JS, more HTML/CSS and finally React. The curriculum end project was a messaging app, Rails as back end api endpoints, React front end, featuring everything I've learned so far, authorization/authentication, data manipulation, api calls from React, full backend / front end unit tests. It felt a bit of double work, but React kinda grew onto me, like an acquired taste.
+I started sending my first applications at that point, but I soon found out how premature that was. After a another round of low, reality sunk in, back to the lessons, more JS, more HTML/CSS and finally React. The curriculum end project was a messaging app, Rails as back end api endpoints, React front end, featuring everything I've learned so far, authorization/authentication, data manipulation, api calls from React, backend / front end unit tests. It felt a bit of double work, but React kinda grew onto me, like an acquired taste.
