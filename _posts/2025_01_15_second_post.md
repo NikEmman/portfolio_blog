@@ -11,7 +11,7 @@ _It felt like rain falling on the soil after a summer drought._
 After going through the whole thing, following along, I jumped to other youtube teachers, mostly watching other write code, without doing much building on my own.
 \
 \
-I was knee deep in the dreaded Tutorial Hell, without even knowing at the time, that this was a thing. I eventually found out about Maui, a cross-platform framework to build desktop and mobile apps all in one codebase. Sounded fun so I tried to follow along what the video was even doing or why. A friend then told me of tutorial hell and pointed out "I need to build actual stuff, on my own". Which I did, I actually make a mobile app, my very own, a calculator. Maaaan! What a dopamine hit, **_I felt so good, the world was mine!_**
+I was knee deep in the dreaded Tutorial Hell, without even knowing at the time, that this was a thing. I eventually found out about Maui, a cross-platform framework to build desktop and mobile apps all in one codebase. Sounded fun so I tried to follow along those video tutorials, not really understanding what the tutor was even doing or why. A friend then told me of tutorial hell and pointed out "I need to build actual stuff, on my own". Which I did, I actually made a mobile app, my very own, a calculator. Maaaan! What a dopamine hit, **_I felt so good, the world was mine!_**
 \
 \
 The world was actually not mine

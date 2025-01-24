@@ -1,21 +1,28 @@
-const projectData = {
-  0: {
+const projectData = [
+  {
     title: "Console Chess",
     description: "A chess game, made in Ruby, for consoles",
     imgUrl: "localPath",
     github: "https://github.com/NikEmman/Chess",
   },
-  1: {
+  {
     title: "My circle",
     description: "A social media, in Ruby/Ruby on Rails",
     imgUrl: "localPath",
     github: "https://github.com/NikEmman/my_circle",
   },
-  2: {
-    title: "Console Chess",
-    description: "A chess game, made in Ruby, for consoles",
+  {
+    title: "Memory Game",
+    description: "A browser game with React, using external API for photos",
     imgUrl: "localPath",
-    github: "https://github.com/NikEmman/Chess",
+    github: "https://github.com/NikEmman/memory-game",
   },
-};
+  {
+    title: "Messenger",
+    description:
+      "Full stack application, React front-end, Rails as API endpoint",
+    imgUrl: "localPath",
+    github: "https://github.com/NikEmman/messenger",
+  },
+];
 export default projectData;
