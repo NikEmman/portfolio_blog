@@ -1,0 +1,9 @@
+.card {
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card p {
+  text-wrap: wrap;
+}
