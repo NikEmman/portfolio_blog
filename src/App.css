@@ -28,19 +28,22 @@ nav ul {
 }
 nav li {
   list-style: none;
+  width: 5em;
+  text-align: center;
 }
 nav a {
-  background-color: var(--foreground-color);
-  font-size: larger;
-  padding: 1em;
-  padding-left: 2em;
-  padding-right: 2em;
-  border-radius: 30px;
+  font-size: x-large;
+  padding-bottom: 0.5em;
+  transition: color 500ms ease-in-out, border-bottom 250ms ease-in-out;
 }
 
 nav a:hover {
-  background-color: #cc0000;
-  color: white;
+  border-bottom: 5px solid #cc0000;
+  color: #cc0000;
+}
+/* Landing page */
+main {
+  padding: 10em;
 }
 /* tech stack*/
 .tech {
@@ -57,12 +60,31 @@ nav a:hover {
   transform: scale(2);
 }
 .tech p {
-  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out, text-shadow 500ms ease-in-out,
+    color 500ms ease-in-out;
 }
+.ruby:hover {
+  text-shadow: 0 0 20px #d34d4d, 0 0 30px #c52525, 0 0 40px #e60c0c,
+    0 0 50px#cc0000;
+  color: #cc0000;
+}
+
+.javascript:hover {
+  text-shadow: 0 0 20px #d3b44d, 0 0 30px rgb(238, 238, 88),
+    0 0 40px rgb(248, 248, 59), 0 0 50px yellow;
+  color: rgb(238, 101, 10);
+}
+.react:hover {
+  text-shadow: 0 0 20px #5ac1db, 0 0 30px #3fb5d3, 0 0 40px #0e92b3,
+    0 0 50px#016983;
+  color: #016983;
+}
+
 /* projects */
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1em;
 }
 footer {
   height: 20vh;
@@ -83,7 +105,7 @@ h1 {
 .post {
   margin: 2em 0;
   padding: 1em;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--post-border);
   width: 50%;
   min-width: 30em;
 }
@@ -106,7 +128,7 @@ code {
 
 /* Style inline code differently from code blocks */
 :not(pre) > code {
-  background-color: #f6f8fa;
+  background-color: var(--bg-code);
   padding: 2px 4px;
   border-radius: 3px;
   color: #e83e8c;
@@ -117,21 +139,4 @@ code {
   max-width: 800px;
   margin: 0 auto;
   padding: 2em;
-}
-/* techStack styles */
-.ruby:hover {
-  text-shadow: 0 0 20px #d34d4d, 0 0 30px #c52525, 0 0 40px #e60c0c,
-    0 0 50px#cc0000;
-  color: #cc0000;
-}
-
-.javascript:hover {
-  text-shadow: 0 0 20px #d3b44d, 0 0 30px rgb(238, 238, 88),
-    0 0 40px rgb(248, 248, 59), 0 0 50px yellow;
-  color: rgb(238, 101, 10);
-}
-.react:hover {
-  text-shadow: 0 0 20px #5ac1db, 0 0 30px #3fb5d3, 0 0 40px #0e92b3,
-    0 0 50px#016983;
-  color: #016983;
 }

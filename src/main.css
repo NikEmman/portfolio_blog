@@ -10,9 +10,12 @@
   --background-color: #f6f6f6;
   --foreground-color: #003cff;
   --primary-text-color: #0a0a0a;
-  --secondary-text-color: rgb(221, 164, 42);
+  --secondary-text-color: rgb(29, 101, 209);
   --toggle-bg: #f0eb9d;
   --toggle-fg: #ffd000;
+  --bg-code: #c6c8ca;
+  --link-color: ;
+  --post-border: black;
 }
 [data-theme="dark"] {
   --background-color: #0a0a0a;
@@ -21,4 +24,6 @@
   --secondary-text-color: rgb(221, 164, 42);
   --toggle-bg: #283452;
   --toggle-fg: #00a6ff;
+  --bg-code: #f6f8fa;
+  --post-border: #eee;
 }
