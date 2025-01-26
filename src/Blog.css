@@ -1,0 +1,48 @@
+/* Blog */
+h1 {
+  padding-top: 1em;
+  text-align: center;
+}
+.posts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.post {
+  margin: 2em 0;
+  padding: 1em;
+  border-bottom: 1px solid var(--post-border);
+  width: 50%;
+  min-width: 30em;
+}
+.post:last-child {
+  border-bottom: none;
+}
+
+/* Style for code blocks */
+pre {
+  padding: 1em;
+  overflow-x: auto;
+}
+
+code {
+  font-family: "Consolas", "Monaco", "Courier New", monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  border-radius: 5px;
+}
+
+/* Style inline code differently from code blocks */
+:not(pre) > code {
+  background-color: var(--bg-code);
+  padding: 2px 4px;
+  border-radius: 3px;
+  color: #e83e8c;
+}
+
+/* Container styles */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2em;
+}

@@ -4,6 +4,7 @@ import "highlight.js/styles/vs2015.css";
 import hljs from "highlight.js";
 import ruby from "highlight.js/lib/languages/ruby";
 import javascript from "highlight.js/lib/languages/javascript";
+import "./Blog.css";
 
 hljs.registerLanguage("ruby", ruby);
 hljs.registerLanguage("javascript", javascript);
