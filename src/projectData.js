@@ -2,7 +2,7 @@ const projectData = [
   {
     title: "Console Chess",
     description: "A chess game, made in Ruby, for consoles",
-    imgUrl: "localPath",
+    imgUrl: "src/assets/chess.jpg",
     github: "https://github.com/NikEmman/Chess",
   },
   {

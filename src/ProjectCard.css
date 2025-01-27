@@ -1,12 +1,38 @@
+.container {
+  width: 500px;
+  height: 350px;
+  perspective: 800px;
+}
 .card {
-  height: 20vh;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1500ms;
+  transform-style: preserve-3d;
+}
+.container:hover > .card {
+  cursor: pointer;
+  transform: rotateY(180deg);
+}
+
+.back,
+.front {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front {
+}
+.back {
+  background-color: inherit;
+  transform: rotateY(180deg);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 1em;
-  border: 2px solid var(--primary-text-color);
-  border-radius: 5px;
-}
-.card p {
-  text-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
 }
