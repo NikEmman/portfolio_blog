@@ -25,9 +25,8 @@
   backface-visibility: hidden;
 }
 
-.front {
-}
 .back {
+  padding: 0.5em;
   background-color: inherit;
   transform: rotateY(180deg);
   display: flex;
@@ -35,4 +34,9 @@
   justify-content: center;
   align-items: center;
   gap: 1em;
+}
+.links {
+  align-self: flex-end;
+  display: flex;
+  gap: 0.5em;
 }
