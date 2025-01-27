@@ -10,9 +10,16 @@ const ProjectCard = ({ project }) => {
           <p>Tech: {project.tech}</p>
           <div className="links">
             {project.live && (
-              <a href="https://deluxe-pastelito-751e93.netlify.app/">Live</a>
+              <a
+                href="https://deluxe-pastelito-751e93.netlify.app/"
+                title="View it live"
+              >
+                Live
+              </a>
             )}
-            <a href={project.github}>GitHub</a>
+            <a href={project.github} title="View the source code on GitHub">
+              GitHub
+            </a>
           </div>
         </div>
         <img className="front" src={project.imgUrl} alt={project.title}></img>

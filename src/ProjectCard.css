@@ -8,6 +8,7 @@
   height: 100%;
   position: relative;
   transition: transform 1500ms;
+  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 .container:hover > .card {
@@ -22,18 +23,23 @@
   border-radius: 5px;
   box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
   position: absolute;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
 .back {
-  padding: 0.5em;
+  padding-left: 10%;
+  padding-right: 10%;
   background-color: inherit;
-  transform: rotateY(180deg);
+  transform: rotateY(180deg) translateZ(1px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1em;
+}
+.back p {
+  align-self: flex-start;
 }
 .links {
   align-self: flex-end;

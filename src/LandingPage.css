@@ -3,18 +3,44 @@ main {
   padding: 10em;
   display: flex;
   flex-direction: column;
-  gap: 2em;
+  gap: 10em;
+}
+/* hero section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 5em;
+}
+.hero h1 {
+  font-size: 6em;
+  align-self: flex-start;
+}
+.hero article {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.hero h2 {
+  font-size: xx-large;
+}
+.hero p {
+  font-size: large;
+  text-wrap: wrap;
 }
 /* tech stack*/
 fieldset {
-  border-radius: 5px;
   border-color: var(--primary-text-color);
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
 }
 legend {
   font-size: large;
+  padding-right: 1em;
 }
 .tech {
-  height: 20vh;
+  height: 10vh;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
@@ -45,4 +71,14 @@ legend {
   text-shadow: 0 0 20px #5ac1db, 0 0 30px #3fb5d3, 0 0 40px #0e92b3,
     0 0 50px#016983;
   color: #016983;
+}
+.projects-title {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.projects-title h2 {
+  position: absolute;
+  z-index: 1;
+  top: -13px;
 }
