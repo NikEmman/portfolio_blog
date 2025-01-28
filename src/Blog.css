@@ -46,3 +46,8 @@ code {
   margin: 0 auto;
   padding: 2em;
 }
+@media only screen and (max-width: 480px) {
+  .post {
+    min-width: 70%;
+  }
+}
