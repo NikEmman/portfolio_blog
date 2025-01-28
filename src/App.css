@@ -34,4 +34,15 @@ footer {
   footer {
     height: 8vh;
   }
+  main {
+    height: 250vh;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .projects {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  main {
+    height: 200vh;
+  }
 }

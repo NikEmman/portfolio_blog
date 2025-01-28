@@ -12,7 +12,7 @@ const LandingPage = () => {
         <article>
           <h2>Hello, World.</h2>
           <p>
-            I&apos;m a web developer, located in Komotini, Greece, .
+            I&apos;m a web developer, located in Komotini, Greece.
             Problem-solving enjoyer, open to learning new tech, available for
             work!
           </p>

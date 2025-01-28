@@ -86,6 +86,7 @@ legend {
 @media only screen and (max-width: 780px) {
   main {
     padding: 4em;
+    gap: 5em;
   }
   .hero h1 {
     font-size: 2em;
@@ -100,6 +101,9 @@ legend {
     font-size: large;
     gap: 1em;
   }
+  /* .App {
+    overflow: auto;
+  } */
 }
 @media only screen and (min-width: 780px) and (max-width: 1300px) {
   .hero h1 {
@@ -107,4 +111,7 @@ legend {
   }
 }
 @media only screen and (max-width: 380px) {
+  main {
+    padding: 2em;
+  }
 }
