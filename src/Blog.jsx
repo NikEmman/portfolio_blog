@@ -26,11 +26,11 @@ const Blog = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await fetch("/src/posts/index.txt");
+        const response = await fetch("public/posts/index.txt");
         const text = await response.text();
         const fileNames = text.trim().split("\n").reverse();
         const postPromises = fileNames.map(async (fileName) => {
-          const postResponse = await fetch(`/src/posts/${fileName}`);
+          const postResponse = await fetch(`public/posts/${fileName}`);
           const content = await postResponse.text();
           return { fileName, content };
         });

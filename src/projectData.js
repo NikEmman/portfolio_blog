@@ -3,7 +3,7 @@ const projectData = [
     title: "Console Chess",
     description: "A chess game for consoles",
     tech: "Ruby",
-    imgUrl: "/chess.png",
+    imgUrl: "public/chess.png",
     github: "https://github.com/NikEmman/Chess",
     live: "https://replit.com/@epistimon2004/Chess",
   },
@@ -20,7 +20,7 @@ const projectData = [
     description:
       "A browser game, where the user must click each of 12 pictures,  only once",
     tech: "JavaScript, React, Flickr API",
-    imgUrl: "/memory_game.png",
+    imgUrl: "public/memory_game.png",
     github: "https://github.com/NikEmman/memory-game",
     live: "https://deluxe-pastelito-751e93.netlify.app/",
   },
@@ -28,7 +28,7 @@ const projectData = [
     title: "Messenger",
     description: "Messaging application",
     tech: "React front-end, Rails back-end (API endpoints)",
-    imgUrl: "/messenger.png",
+    imgUrl: "public/messenger.png",
     github: "https://github.com/NikEmman/messenger",
   },
 ];

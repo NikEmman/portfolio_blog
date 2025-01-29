@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "https://nikemman.github.io/portfolio_blog",
+  base: "https://nikemman.github.io/",
   optimizeDeps: {
     include: ["react-markdown"],
   },
