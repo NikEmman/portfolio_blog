@@ -18,3 +18,5 @@ The world was actually not mine
 \
 \
 Around that time I became a father and between that and a full time, shift-based job, I was hard pressed to find spare time. But my resolve hardened. The idea entered my head "Programming and building stuff feels so good, could it..Could it become my new job??" In order to try to make this new dream a reality though, I needed to get out of tutorial hell, I needed structured lessons and no aimless wandering around. But what?
+\
+\

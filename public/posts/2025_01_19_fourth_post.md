@@ -15,3 +15,5 @@ After putting up a couple skeleton pages in plain html / css, finding a way to p
 After half an hour of search, it came down to this. First I created a component for the switch. It is basically a checkbox input, it gets 2 props for the parent component. A boolean state, held by the parent component, and a callback function `handleChange` to be able to change state of the parent component. Then on said parent component, I have a `data-theme` attribute on the outer `<div>`, whose value is based on the boolean state. Add some css to define colors as custom variables and have them re-defined for `[data-theme="dark"]` and finally some css for the transition of the background color, to make it less jarring and....voila! Got my self a dark theme.
 \
 In all honesty, the hardest part, which took most time, was the css part. Making something look not-horrible is a struggle. I...rock? No..that's not it...Ah, got it! [Let there be Rock!](https://www.youtube.com/watch?v=3f2g4RMfhS0)
+\
+\
