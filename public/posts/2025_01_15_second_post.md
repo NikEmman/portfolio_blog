@@ -1,5 +1,8 @@
-## Web Dev Origins Story (part 1)
+## Web Dev Origins Story
 
+\
+\
+\
 Around 2022 I had a feeling my brain was atrophying, my job wasn't much of an intellectual challenge, so as a way to keep my brain sharp, I started learning programming with C# and Microsoft's [Beginner series](https://www.youtube.com/watch?v=0QUgvfuKvWU).
 \
 \
@@ -20,3 +23,23 @@ The world was actually not mine
 Around that time I became a father and between that and a full time, shift-based job, I was hard pressed to find spare time. But my resolve hardened. The idea entered my head "Programming and building stuff feels so good, could it..Could it become my new job??" In order to try to make this new dream a reality though, I needed to get out of tutorial hell, I needed structured lessons and no aimless wandering around. But what?
 \
 \
+_Deus ex machina_
+\
+\
+As my shifts left me with no standard time to attend a boot camp, I found out about [The Odin Project](https://www.theodinproject.com/). It is a fully fledged open source curriculum, designed to help people become web devs. So around September of 2023, my journey at the hands of Odin begun.
+\
+\
+\
+It taught me HTML, CSS, some JavaScript and then moved on to the wonderful Ruby world! Ruby lessons culminated with the [Chess game](https://github.com/NikEmman/Chess), a console version of chess! It felt like climbing mount Olympus... But then, I was done. Continued the learning trek with Ruby on Rails, which ended with building a facebook clone, featuring all my Rails knowledge, I even hosted it on Fly.io, showed it to friends and family.
+\
+\
+\
+Here was that feeling again! **_The world was mine_**!
+\
+\
+\
+ The world was actually not mine.
+\
+\
+\
+I started sending my first applications at that point, but I soon found out how premature that was. After a another round of low, reality sunk in, back to the lessons, more JS, more HTML/CSS and finally React. The curriculum end project was a messaging app, Rails as back end api endpoints, React front end, featuring everything I've learned so far, authorization/authentication, data manipulation, api calls from React, backend / front end unit tests. It felt a bit of double work, but React kinda grew onto me, like an acquired taste.

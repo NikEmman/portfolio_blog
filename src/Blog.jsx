@@ -46,7 +46,7 @@ const Blog = () => {
   }, []);
 
   if (loading) {
-    return <div>Loading posts...</div>;
+    return <div className="posts">Loading posts...</div>;
   }
 
   return (

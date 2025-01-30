@@ -15,5 +15,3 @@ I've read about mobile-first design, desktop-first design. Since I mostly had my
 \
 \
 I started with reducing the screen size with the help of browser dev tools, to commonly used screen sizes, `760px` for tablet or `380px` for mobile, and fix the parts that broke. Then went ahead to shrink the screen to various sizes, see where the page broke horribly, and fix it with a media query at that size. Phew! Done! And you know what? It was even half as bad as I imagined it to be. We do that to ourselves, procrastination. Anyway, I'm just happy I sticked my proverbial flag on top of media queries hill!
-\
-\
