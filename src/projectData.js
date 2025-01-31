@@ -12,7 +12,7 @@ const projectData = [
     description:
       "A social media platform where you can follow people and see their posts",
     tech: "Ruby, Rails",
-    imgUrl: "",
+    imgUrl: "my_circle.png",
     github: "https://github.com/NikEmman/my_circle",
   },
   {
