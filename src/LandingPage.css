@@ -72,15 +72,11 @@ legend {
     0 0 50px#016983;
   color: #016983;
 }
-.projects-title {
-  display: flex;
-  flex-direction: column;
-  position: relative;
+legend {
+  padding-bottom: 1em;
 }
-.projects-title h2 {
-  position: absolute;
-  z-index: 1;
-  top: -13px;
+.projects {
+  position: relative;
 }
 
 @media only screen and (max-width: 780px) {

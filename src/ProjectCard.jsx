@@ -1,12 +1,20 @@
 import PropTypes from "prop-types";
+import { useState } from "react";
 import "./ProjectCard.css";
 const ProjectCard = ({ project }) => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="container">
-      <div className="card">
-        <div className="back">
-          <h3>{project.title}</h3>
-          <p>{project.description}</p>
+    <div
+      className={isOpen ? "card open" : "card"}
+      onClick={() => setIsOpen(!isOpen)}
+    >
+      <h3>{project.title}</h3>
+      <img src={project.imgUrl} alt={project.title}></img>
+      {!isOpen ? (
+        <p>{project.description}</p>
+      ) : (
+        <>
+          <p>{project.largeDescription}</p>
           <p>Tech: {project.tech}</p>
           <div className="links">
             {project.live && (
@@ -21,9 +29,8 @@ const ProjectCard = ({ project }) => {
               GitHub
             </a>
           </div>
-        </div>
-        <img className="front" src={project.imgUrl} alt={project.title}></img>
-      </div>
+        </>
+      )}
     </div>
   );
 };
