@@ -31,5 +31,13 @@ const projectData = [
     imgUrl: "messenger.png",
     github: "https://github.com/NikEmman/messenger",
   },
+  {
+    title: "Battleship",
+    description: "A browser version of the famous board game",
+    tech: "Html/CSS, JavaScript",
+    imgUrl: "battleship_1.png",
+    github: "https://github.com/NikEmman/battleship",
+    live: "https://nikemman.github.io/battleship/c",
+  },
 ];
 export default projectData;
