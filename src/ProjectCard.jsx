@@ -1,37 +1,32 @@
 import PropTypes from "prop-types";
+import ProjectCardDetailed from "./ProjectCardDetailed";
 import { useState } from "react";
 import "./ProjectCard.css";
+import { createPortal } from "react-dom";
 const ProjectCard = ({ project }) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const handleIsOpen = () => {
+    setIsOpen(false);
+  };
   return (
-    <div
-      className={isOpen ? "card open" : "card"}
-      onClick={() => setIsOpen(!isOpen)}
-    >
-      <h3>{project.title}</h3>
-      <img src={project.imgUrl} alt={project.title}></img>
-      {!isOpen ? (
+    <>
+      <div className="card" onClick={() => setIsOpen(true)}>
+        <h3>{project.title}</h3>
+        <img src={project.imgUrl} alt={project.title}></img>
+
         <p>{project.description}</p>
-      ) : (
-        <>
-          <p>{project.largeDescription}</p>
-          <p>Tech: {project.tech}</p>
-          <div className="links">
-            {project.live && (
-              <a
-                href="https://deluxe-pastelito-751e93.netlify.app/"
-                title="View it live"
-              >
-                Live
-              </a>
-            )}
-            <a href={project.github} title="View the source code on GitHub">
-              GitHub
-            </a>
-          </div>
-        </>
-      )}
-    </div>
+      </div>
+      {isOpen &&
+        createPortal(
+          <ProjectCardDetailed
+            key={project.title}
+            project={project}
+            handleIsOpen={handleIsOpen}
+          />,
+          document.body
+        )}
+    </>
   );
 };
 ProjectCard.propTypes = {
