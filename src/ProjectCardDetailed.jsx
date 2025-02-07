@@ -1,8 +1,13 @@
 import PropTypes from "prop-types";
+import { useState, useEffect } from "react";
 
 const ProjectCardDetailed = ({ project, handleIsOpen }) => {
+  const [isShowing, setIsShowing] = useState(false);
+  useEffect(() => {
+    setTimeout(() => setIsShowing(true), 100);
+  });
   return (
-    <div className="card open">
+    <div className={"card open " + (isShowing && "show")}>
       <button onClick={handleIsOpen}>X</button>
       <h3>{project.title}</h3>
       <img src={project.imgUrl} alt={project.title}></img>
@@ -10,10 +15,7 @@ const ProjectCardDetailed = ({ project, handleIsOpen }) => {
       <p>Tech: {project.tech}</p>
       <div className="links">
         {project.live && (
-          <a
-            href="https://deluxe-pastelito-751e93.netlify.app/"
-            title="View it live"
-          >
+          <a href={project.live} title="View it live">
             Live
           </a>
         )}

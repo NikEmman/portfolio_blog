@@ -3,17 +3,19 @@ import ProjectCardDetailed from "./ProjectCardDetailed";
 import { useState } from "react";
 import "./ProjectCard.css";
 import { createPortal } from "react-dom";
+
 const ProjectCard = ({ project }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleIsOpen = () => {
     setIsOpen(false);
   };
+
   return (
     <>
       <div className="card" onClick={() => setIsOpen(true)}>
         <h3>{project.title}</h3>
-        <img src={project.imgUrl} alt={project.title}></img>
+        <img src={project.imgUrl} alt={project.title} />
 
         <p>{project.description}</p>
       </div>
@@ -29,7 +31,9 @@ const ProjectCard = ({ project }) => {
     </>
   );
 };
+
 ProjectCard.propTypes = {
   project: PropTypes.object,
 };
+
 export default ProjectCard;
