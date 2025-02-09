@@ -8,7 +8,7 @@ const ProjectCardDetailed = ({ project, handleIsOpen }) => {
   });
   return (
     <div className={"card open " + (isShowing && "show")}>
-      <button onClick={handleIsOpen}>X</button>
+      <button onClick={handleIsOpen}>x</button>
       <h3>{project.title}</h3>
       <img src={project.imgUrl} alt={project.title}></img>
       <p>{project.largeDescription}</p>
