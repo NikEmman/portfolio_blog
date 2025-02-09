@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
+import "./ProjectCardDetailed.css";
 
 const ProjectCardDetailed = ({ project, handleIsOpen }) => {
   const [isShowing, setIsShowing] = useState(false);
@@ -12,7 +13,7 @@ const ProjectCardDetailed = ({ project, handleIsOpen }) => {
       <h3>{project.title}</h3>
       <img src={project.imgUrl} alt={project.title}></img>
       <p>{project.largeDescription}</p>
-      <p>Tech: {project.tech}</p>
+      <p className="tech-stack">Tech: {project.tech}</p>
       <div className="links">
         {project.live && (
           <a href={project.live} title="View it live">
