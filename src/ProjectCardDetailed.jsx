@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
-import "./ProjectCardDetailed.css";
 
 const ProjectCardDetailed = ({ project, handleIsOpen }) => {
   const [isShowing, setIsShowing] = useState(false);
