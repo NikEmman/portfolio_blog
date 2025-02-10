@@ -29,6 +29,7 @@
   width: 60vw;
   height: auto;
   background: var(--background-color);
+  color: var(--primary-text-color);
   border-radius: 10px;
   padding: 30px 30px;
   opacity: 0;
@@ -46,13 +47,14 @@
 .show button {
   cursor: pointer;
   align-self: flex-end;
+  font-weight: 700;
   border-radius: 0;
   width: 1.5em;
   height: 1.5em;
   border: none;
   padding: 0.3em;
   display: flex;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
 }
 .show button:hover {

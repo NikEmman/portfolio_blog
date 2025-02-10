@@ -13,7 +13,7 @@ function App() {
       <ThemeSwitch isChecked={isDark} handleChange={() => setIsDark(!isDark)} />
       <Outlet />
 
-      <Footer />
+      <Footer isDark={isDark} />
     </div>
   );
 }
