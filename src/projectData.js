@@ -3,7 +3,7 @@ const projectData = [
     title: "Console Chess",
     description: "A chess game for consoles",
     tech: "Ruby",
-    imgUrl: "chess.png",
+    imgUrl: "chess_1.png",
     largeDescription:
       "This is a two player game. After reading the instructions on how to play, each player inputs a name, and then play in turn. The game uses standard chess rules. Players have the ability to save/load a game, admit defeat and end the game or propose a draw to the opponent. During a game, the taken pieces are also displayed",
     github: "https://github.com/NikEmman/Chess",

@@ -73,4 +73,8 @@ body:has(.open) > #root {
     width: 300px;
     height: 250px;
   }
+  .open {
+    width: 80vw;
+    height: 80vh;
+  }
 }
