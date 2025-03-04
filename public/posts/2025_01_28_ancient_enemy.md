@@ -1,5 +1,7 @@
 ## Inevitable
 
+_28 January 2025_
+
 \
 \
 As my portfolio site develops, another though crosses the mind. "Shouldn't it be somewhat decent for small screens?" Ah, there, another one of these problems I have done everything in my power to avoid thus far, another enemy of old, the reviled media queries and responsive design. "You hear that, mr. Anderson?... That is the sound of inevitability!". With [Agent Smith's](https://www.youtube.com/watch?v=kIbEj1CIpuU&t=7s) line ringing in my head, I realized I couldn't run from it forever, eventually I would have to deal with it. I decided to make my stand today, this project.
