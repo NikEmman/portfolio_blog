@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import "highlight.js/styles/vs2015.css";
 import hljs from "highlight.js";
 import ruby from "highlight.js/lib/languages/ruby";
@@ -57,6 +58,7 @@ const Blog = () => {
         {posts.map(({ fileName, content }) => (
           <article key={fileName} className="post">
             <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
               components={{
                 code: ({ inline, className, children, ...props }) => {
                   const match = /language-(\w+)/.exec(className || "");

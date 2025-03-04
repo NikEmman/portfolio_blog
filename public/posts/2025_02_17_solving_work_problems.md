@@ -1,19 +1,19 @@
-## What changes the nature of a ~~man~~ programmer?
+## What can change the nature of a ~~man~~ programmer?
 
 \
 \
 \
-Learning on your own,you are blessed with many tutors. The advice that comes up the most is, after you learn the basics go and solve a problem you face with coding. Well I finally found a problem and worked on a solution. Here is the story:
-\
-\
+Great question asked by [one of the best cRPGs ever](https://en.wikipedia.org/wiki/Planescape:_Torment). Learning on your own, you are blessed with many tutors. The advice that comes up the most is, after you learn the basics go and solve a problem you face with coding. Well I finally found a problem and worked on a solution. Here is the story:
 
-### The problem
+\
+\
+**The problem**
 
 At my current, non-programming job, one of my duties involves drafting documents for the Courts, formal statements, arrest documents and many other. What they all have in common is first the current date details, like day month year, day of week, time of drafting he document. More over, the documents usually include information of a person, either a witness or suspect. I can get most of the details from the person's ID document, but formatting the information the way it is required by the process can get tedious, especially in a busy day. Same goes for a vehicle's data.
-\
-\
 
-### The solution
+\
+\
+**The solution**
 
 Parsing the current date and providing the needed stuff was easy enough.
 \
@@ -31,3 +31,7 @@ Finishing touches: Since I intended the app to be a web page and have other's us
 \
 \
 Host it on GitHub pages and.... Done! Now THAT'S a good feeling. I had just solved a real problem with programming skills. And as a kicker, my solution helped a bunch of other people at work. It felt like a coming of age ritual, marking my passage from programming adolescence to young adulthood. Now I need more problems to solve!
+
+\
+\
+It turned out, there was more joy in store! Quite a few people liked it, a number of them even messaged me with suggestions. It meant they had real interest in it. People, real people used my tool! Woohoo!! I couldn't be happier for my work. I even talked one of them to into learning programming. In my book that is success! Since then, I implemented a lot of the suggestions I received, and using it myself in day-to-day work, identified and added more functionality to it, made it, overall, more robust. What is next?!
