@@ -39,7 +39,10 @@ code {
   border-radius: 3px;
   color: #e83e8c;
 }
-
+p,
+code {
+  word-break: break-word;
+}
 /* Container styles */
 .container {
   max-width: 800px;
