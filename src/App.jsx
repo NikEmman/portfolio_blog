@@ -6,7 +6,8 @@ import { useState } from "react";
 import ThemeSwitch from "./ThemeSwitch";
 
 function App() {
-  const [isDark, setIsDark] = useState(false);
+  const preference = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const [isDark, setIsDark] = useState(preference);
   return (
     <div className="App" data-theme={isDark ? "dark" : "light"}>
       <NavBar />
