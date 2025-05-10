@@ -12,7 +12,7 @@ const ThemeSwitch = ({ handleChange, isChecked }) => {
           onChange={handleChange}
           checked={isChecked}
         />
-        <label htmlFor="check">Dark Mode</label>
+        <label htmlFor="check">{isChecked ? "🌞" : "🌙"}</label>
       </div>
     </div>
   );
