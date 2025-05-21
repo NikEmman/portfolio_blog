@@ -16,10 +16,6 @@ const routes = [
         path: "/blog",
         element: <Blog />,
       },
-      // {
-      //   path: "/profile/:id",
-      //   element: <Profile />,
-      // },
     ],
   },
 ];
