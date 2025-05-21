@@ -6,7 +6,7 @@ const projectData = [
     tech: "HTML / CSS / JavaScript, ",
     imgUrl: "vaxyp.png",
     largeDescription:
-      "Developed a document drafting tool for Hellenic Police interrogators/investigators to streamline and reduce daily paperwork. Provided for free to all officers, enhancing efficiency and accessibility. Integrated user feedback through several rounds of conversations for continuous improvement. Conducted extensive troubleshooting and iterative refinements to ensure optimal functionality. Designed with localization options to accommodate various departmental needs. ",
+      "A document drafting tool for Hellenic Police interrogators/investigators to streamline and reduce daily paperwork.Openly shared with all officers, enhancing efficiency and accessibility. Integrated user feedback through several rounds of conversations for continuous improvement. Conducted extensive troubleshooting and iterative refinements to ensure optimal functionality. Designed with localization options to accommodate various departmental needs. ",
     github: "https://github.com/NikEmman/vaxyp",
     live: "https://nikemman.github.io/vaxyp/",
   },
@@ -30,17 +30,7 @@ const projectData = [
       "My circle is a social media platform. Users must create an account first, and then create their profile, including an avatar picture. On their home page they can write posts, comment on them, and like/dislike posts and comments. Can also find a list of users and sent follow requests. When the request is accepted, the user can also see posts on his home page of the followed users, in chronological order.",
     github: "https://github.com/NikEmman/my_circle",
   },
-  // {
-  //   title: "Memory Game",
-  //   description:
-  //     "A browser game, where the user must click each of 12 pictures,  only once",
-  //   tech: "JavaScript, React, Flickr API",
-  //   imgUrl: "memory_game.png",
-  //   largeDescription:
-  //     "Browser SPA game, made with React.The player is given a selection of four themes, and then 12 images of that theme are pulled from Flickr. The player must then click each image once. Upon clicking an image thought, they are re-shuffled. A counter keeps track of the current effort and resets if an image is clicked twice, and an other counter keeps track of the best effort so far.",
-  //   github: "https://github.com/NikEmman/memory-game",
-  //   live: "https://deluxe-pastelito-751e93.netlify.app/",
-  // },
+
   {
     title: "Messenger",
     description: "Messaging application",
