@@ -19,6 +19,7 @@ const projectData = [
     largeDescription:
       "A messaging application build as a Rails monolith with React front-end and Rails serving data through API controllers. Users, after signing in/logging in, and creating a profile, can start a conversation and then add users to that conversations from a searchable user base. Each user can see a list of conversation he/she is a member of and send a message. Text can be sent formatted",
     github: "https://github.com/NikEmman/messenger",
+    live: "https://messenger-lr1s.onrender.com/",
   },
   {
     title: "Battleship",
