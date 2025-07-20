@@ -25,7 +25,7 @@ const projectData = [
     title: "Battleship",
     description: "A browser version of the famous board game",
     tech: "Html/CSS, JavaScript",
-    imgUrl: "battleship_1.png",
+    imgUrl: "battleship.png",
     largeDescription:
       "A browser version of the famous board game. It is made using only html/css and vanilla JavaScript. Can be a single player or two player game, if a Player 2 name is also given. Then each player is asked in turn to place 5 ships on their boards. Then game begins! If single player, the user can keep attacking the enemy board (right-side) and watch the AI hits on his/her own board(left-side). If it's a 2 player game, after each attack the player hides his board so the enemy won't peak, and then passes the screen to the enemy so he/she can attack. Again, each player is shown a friendly and enemy board. Game ends when all ships of a player are sunk!",
     github: "https://github.com/NikEmman/battleship",
