@@ -1,13 +1,18 @@
 import PropTypes from "prop-types";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import ThemeContext from "./ThemeContext";
 
 const ProjectCardDetailed = ({ project, handleIsOpen }) => {
+  const { isDark } = useContext(ThemeContext);
   const [isShowing, setIsShowing] = useState(false);
   useEffect(() => {
     setTimeout(() => setIsShowing(true), 100);
   });
   return (
-    <div className={"card open " + (isShowing && "show")}>
+    <div
+      className={"card open " + (isShowing && "show")}
+      data-theme={isDark ? "dark" : "light"}
+    >
       <button onClick={handleIsOpen}>x</button>
       <h3>{project.title}</h3>
       <img src={project.imgUrl} alt={project.title}></img>
