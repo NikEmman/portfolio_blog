@@ -81,6 +81,10 @@ legend {
 }
 .projects {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  align-items: center;
 }
 
 @media only screen and (max-width: 780px) {
@@ -101,9 +105,6 @@ legend {
     font-size: large;
     gap: 1em;
   }
-  /* .App {
-    overflow: auto;
-  } */
 }
 @media only screen and (min-width: 780px) and (max-width: 1300px) {
   .hero h1 {
@@ -112,6 +113,6 @@ legend {
 }
 @media only screen and (max-width: 380px) {
   main {
-    padding: 2em;
+    padding: 1em;
   }
 }

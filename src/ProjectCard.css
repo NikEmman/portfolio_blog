@@ -12,6 +12,7 @@
 .card p {
   padding-left: 0.5em;
   padding-right: 0.5em;
+  text-wrap: warp;
 }
 .card img {
   width: 100%;
@@ -26,7 +27,6 @@
   position: fixed;
   top: 10%;
   left: 10%;
-  width: 60vw;
   height: auto;
   background: var(--background-color);
   color: var(--primary-text-color);
@@ -75,8 +75,14 @@ body:has(.open) > #root {
     width: 300px;
     height: 250px;
   }
+  .open img {
+    min-height: 10vh;
+  }
   .open {
-    width: 80vw;
-    height: 80vh;
+    width: 90vw;
+    height: 90vh;
+    top: 5%;
+    left: 5%;
+    overflow: auto;
   }
 }
