@@ -49,6 +49,9 @@ code {
   margin: 0 auto;
   padding: 2em;
 }
+.blog-container a:hover {
+  color: var(--accent-hover);
+}
 @media only screen and (max-width: 480px) {
   .post {
     min-width: 70%;
