@@ -37,7 +37,7 @@ const Blog = () => {
         });
         const postContents = await Promise.all(postPromises);
         setPosts(postContents);
-        setLoading(true);
+        setLoading(false);
       } catch (error) {
         console.error("Error fetching posts:", error);
         setLoading(false);
