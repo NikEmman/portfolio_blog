@@ -13,7 +13,7 @@ const ProjectCard = ({ project }) => {
 
   return (
     <>
-      <div className="card" onClick={() => setIsOpen(true)}>
+      <div className="card closed" onClick={() => setIsOpen(true)}>
         <h3>{project.title}</h3>
         <img src={project.imgUrl} alt={project.title} />
 

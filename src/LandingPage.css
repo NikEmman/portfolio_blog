@@ -1,122 +1,276 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
-/* Landing page */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:wght@400..900&display=swap");
+
+/* Modern Landing Page Styles */
 main {
-  padding: 10em;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 10em;
-}
-/* hero section */
-.hero {
-  display: flex;
-  flex-direction: column;
-  gap: 5em;
-}
-.hero h1 {
-  font-family: "Titillium Web", serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 6em;
-  align-self: flex-start;
-}
-.hero article {
-  align-self: flex-end;
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-}
-.hero h2 {
-  font-size: xx-large;
-}
-.hero p {
-  font-size: large;
-  text-wrap: wrap;
-}
-/* tech stack*/
-fieldset {
-  border-color: var(--primary-text-color);
-  border-left: none;
-  border-right: none;
-  border-bottom: none;
-}
-legend {
-  font-size: large;
-  padding-right: 1em;
-}
-.tech {
-  height: 10vh;
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  font-size: x-large;
-  font-weight: 700;
-  cursor: default;
-}
-.tech p:hover {
-  transform: scale(2);
-}
-.tech p {
-  transition: transform 500ms ease-in-out, text-shadow 500ms ease-in-out,
-    color 500ms ease-in-out;
-}
-.ruby:hover {
-  text-shadow: 0 0 20px #d34d4d, 0 0 30px #c52525, 0 0 40px #e60c0c,
-    0 0 50px#cc0000;
-  color: #cc0000;
+  gap: 6rem;
 }
 
-.javascript:hover {
-  text-shadow: 0 0 20px #d3b44d, 0 0 30px rgb(238, 238, 88),
-    0 0 40px rgb(248, 248, 59), 0 0 50px yellow;
-  color: rgb(238, 101, 10);
-}
-.react:hover {
-  text-shadow: 0 0 20px #5ac1db, 0 0 30px #3fb5d3, 0 0 40px #0e92b3,
-    0 0 50px#016983;
-  color: #016983;
-}
-legend {
-  padding-bottom: 1em;
-}
-.projects {
+/* Hero Section - Modern Design */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  min-height: 60vh;
   position: relative;
 }
 
-@media only screen and (max-width: 780px) {
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(
+    circle,
+    rgba(99, 102, 241, 0.1) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: clamp(3rem, 8vw, 5rem);
+  line-height: 1.1;
+  background: linear-gradient(
+    135deg,
+    var(--primary-text-color),
+    var(--accent-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+}
+
+.hero article {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--primary-text-color);
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: var(--secondary-text-color);
+  max-width: 500px;
+}
+
+/* Modern Fieldset Styling */
+fieldset {
+  border: 1px solid var(--post-border);
+  border-radius: var(--border-radius);
+  padding: 3rem 2rem;
+  background: rgba(var(--background-secondary), 0.5);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+fieldset::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--accent-color),
+    transparent
+  );
+}
+
+legend {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-text-color);
+  padding: 0 2rem;
+  background: var(--background-color);
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--post-border);
+}
+
+/* Tech Stack Section */
+.tech {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+  justify-items: center;
+}
+
+.tech p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 1.5rem 2rem;
+  border-radius: var(--border-radius);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.tech p::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--shine-overlay),
+    transparent
+  );
+  transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tech p:hover::before {
+  left: 100%;
+}
+
+.tech p:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 20px 40px var(--shadow-hover);
+}
+
+/* Technology-specific hover effects */
+.ruby:hover {
+  background: linear-gradient(135deg, #cc0000, #e60c0c);
+  color: white;
+  box-shadow: 0 20px 40px rgba(204, 0, 0, 0.3);
+}
+
+.javascript:hover {
+  background: linear-gradient(135deg, #f7df1e, #ffd000);
+  color: #333;
+  box-shadow: 0 20px 40px rgba(247, 223, 30, 0.3);
+}
+
+.react:hover {
+  background: linear-gradient(135deg, #61dafb, #21d4fd);
+  color: #333;
+  box-shadow: 0 20px 40px rgba(97, 218, 251, 0.3);
+}
+
+/* Projects Section */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
   main {
-    padding: 4em;
-    gap: 5em;
+    padding: 2rem 1rem;
+    gap: 4rem;
   }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+    min-height: auto;
+  }
+
   .hero h1 {
-    font-size: 2em;
+    font-size: clamp(2.5rem, 10vw, 4rem);
   }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.125rem;
+    max-width: none;
+  }
+
   fieldset {
-    height: 30vh;
+    padding: 2rem 1rem;
   }
+
   .tech {
-    height: 100%;
-    flex-direction: column;
-    align-items: center;
-    font-size: large;
-    gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
   }
-}
-@media only screen and (min-width: 780px) and (max-width: 1300px) {
-  .hero h1 {
-    font-size: 3em;
+
+  .tech p {
+    font-size: 1.25rem;
+    padding: 1rem 1.5rem;
   }
-}
-@media only screen and (max-width: 380px) {
-  main {
-    padding: 1em;
-  }
-}
-@media screen and (max-width: 780px) {
+
   .projects {
-    display: flex;
-    flex-direction: column;
-    gap: 2em;
-    align-items: center;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
+}
+
+@media only screen and (max-width: 480px) {
+  main {
+    padding: 1rem 0.5rem;
+  }
+
+  .hero h2 {
+    font-size: 1.75rem;
+  }
+
+  .tech {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  legend {
+    font-size: 1.25rem;
+    padding: 0 1rem;
+  }
+}
+
+/* Animation for page load */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero,
+fieldset {
+  animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+fieldset:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+fieldset:nth-child(4) {
+  animation-delay: 0.4s;
 }

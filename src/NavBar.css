@@ -1,26 +1,138 @@
 nav {
-  padding: 1em;
-  border-bottom: 2px solid var(--primary-text-color);
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--post-border);
   position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(var(--background-color), 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+nav::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--accent-color),
+    transparent
+  );
+  opacity: 0.6;
+}
+
 nav ul {
-  padding: 1em;
+  padding: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  list-style: none;
+  max-width: 1200px;
+  margin: 0 auto;
 }
+
 nav li {
   list-style: none;
-  width: 5em;
-  min-width: fit-content;
-  text-align: center;
+  position: relative;
 }
+
 nav a {
-  font-size: x-large;
-  padding-bottom: 0.5em;
-  transition: color 500ms ease-in-out, border-bottom 250ms ease-in-out;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--primary-text-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.875rem;
+}
+
+nav a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--border-radius);
+  background: linear-gradient(135deg, var(--accent-color), var(--accent-hover));
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
+}
+
+nav a::after {
+  display: none; /* Override the global ::after rule */
 }
 
 nav a:hover {
-  border-bottom: 5px solid #cc0000;
-  color: #cc0000;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--shadow-hover);
+}
+
+nav a:hover::before {
+  opacity: 1;
+}
+
+/* Active/current page styling */
+nav a.active {
+  color: white;
+  background: linear-gradient(135deg, var(--accent-color), var(--accent-hover));
+  box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+/* Mobile navigation */
+@media only screen and (max-width: 768px) {
+  nav {
+    padding: 1rem;
+  }
+
+  nav ul {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    font-size: 0.8125rem;
+    padding: 0.625rem 1.25rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.5rem 0;
+  }
+
+  nav a {
+    width: 200px;
+    text-align: center;
+    font-size: 0.875rem;
+  }
+}
+
+/* Special handling for external links */
+nav a[href^="mailto:"] {
+  background: linear-gradient(135deg, var(--success-color), #059669);
+  color: white;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+}
+
+nav a[href^="mailto:"]:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+}
+
+nav a[href^="mailto:"]::before {
+  display: none;
 }

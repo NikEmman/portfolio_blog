@@ -37,7 +37,7 @@ const Blog = () => {
         });
         const postContents = await Promise.all(postPromises);
         setPosts(postContents);
-        setLoading(false);
+        setLoading(true);
       } catch (error) {
         console.error("Error fetching posts:", error);
         setLoading(false);
@@ -47,7 +47,11 @@ const Blog = () => {
   }, []);
 
   if (loading) {
-    return <div className="posts">Loading posts...</div>;
+    return (
+      <div className="posts">
+        <p className="loading">Loading posts...</p>
+      </div>
+    );
   }
 
   return (
