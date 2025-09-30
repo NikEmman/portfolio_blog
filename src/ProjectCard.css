@@ -120,6 +120,7 @@
 }
 
 .open p {
+  overflow: auto;
   line-height: 1.7;
   color: var(--secondary-text-color);
   margin-bottom: 1rem;
@@ -226,7 +227,6 @@ body:has(.open)::before {
     padding: 1rem;
   }
   .open p {
-    overflow: auto;
     line-height: 1.3;
   }
 
