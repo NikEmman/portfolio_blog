@@ -15,9 +15,11 @@ const ProjectCard = ({ project }) => {
     <>
       <div className="card closed" onClick={() => setIsOpen(true)}>
         <h3>{project.title}</h3>
+
         <img src={project.imgUrl} alt={project.title} />
 
         <p>{project.description}</p>
+        <h5>{project.created}</h5>
       </div>
       {isOpen &&
         createPortal(

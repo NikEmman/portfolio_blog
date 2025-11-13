@@ -50,6 +50,13 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
+.card h5 {
+  padding: 1.5rem 1.5rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: var(--primary-text-color);
+  align-self: end;
+}
 
 /* Modal/Detailed view - Simple and Clean */
 .open {
