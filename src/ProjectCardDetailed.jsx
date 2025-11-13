@@ -15,6 +15,7 @@ const ProjectCardDetailed = ({ project, handleIsOpen }) => {
     >
       <button onClick={handleIsOpen}>x</button>
       <h3>{project.title}</h3>
+
       <img src={project.imgUrl} alt={project.title}></img>
       <p>{project.largeDescription}</p>
       <p className="tech-stack">Tech: {project.tech}</p>
