@@ -24,6 +24,17 @@ const projectData = [
     live: "https://messenger-lr1s.onrender.com/",
   },
   {
+    title: "Work work!",
+    description: "A browser extension automation tool",
+    tech: "HTML / CSS / JavaScript",
+    imgUrl: "extension.png",
+    largeDescription:
+      "A browser extension for Firefox, as tool to automate data entry and extraction on internal web interfaces",
+    github: "https://github.com/NikEmman/workwork",
+    created: "Nov 2025",
+    live: "https://addons.mozilla.org/en-US/firefox/addon/work-work/",
+  },
+  {
     title: "Roxanne's Quest",
     description: "A puzzle game for pre-school children",
     tech: "Ruby / DragonRuby GameDev tool",
