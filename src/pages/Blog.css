@@ -1,0 +1,167 @@
+.page {
+  padding-block: clamp(48px, 8vw, 96px);
+}
+
+.page-title {
+  margin-top: 12px;
+  font-size: clamp(2.2rem, 5.5vw, 3.4rem);
+  letter-spacing: -0.015em;
+}
+
+.page-intro {
+  margin-top: 16px;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.error-page .button {
+  margin-top: 32px;
+}
+
+.page-title del,
+.post-link h2 del,
+.post-nav del {
+  color: var(--text-subtle);
+  text-decoration-thickness: 2px;
+}
+
+/* Post list */
+.post-list {
+  margin-top: 48px;
+  border-top: 1px solid var(--border);
+}
+
+.post-list li {
+  border-bottom: 1px solid var(--border);
+}
+
+.post-link {
+  display: block;
+  padding: 28px 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+.post-link time,
+.post-header time {
+  color: var(--text-subtle);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+}
+
+.post-link h2 {
+  margin-top: 6px;
+  font-size: 1.7rem;
+  transition: color 0.15s ease;
+}
+
+.post-link:hover h2 {
+  color: var(--accent);
+}
+
+.post-link p {
+  display: -webkit-box;
+  margin-top: 8px;
+  overflow: hidden;
+  color: var(--text-muted);
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* Single post */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding-block: 8px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.post-header {
+  margin-top: 24px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--border);
+}
+
+.prose {
+  margin-top: 32px;
+  font-family: var(--font-serif);
+  font-size: 1.22rem;
+  line-height: 1.7;
+}
+
+.prose > * + * {
+  margin-top: 1.1em;
+}
+
+.prose strong {
+  font-family: var(--font-sans);
+  font-size: 0.88em;
+  font-weight: 600;
+}
+
+.prose p > em:only-child {
+  display: block;
+  padding-left: 18px;
+  border-left: 3px solid var(--accent);
+  color: var(--text-muted);
+}
+
+.prose a {
+  text-decoration: underline;
+}
+
+.prose code {
+  padding: 2px 6px;
+  border-radius: 5px;
+  background: var(--bg-alt);
+  font-family: var(--font-mono);
+  font-size: 0.8em;
+}
+
+.prose pre {
+  overflow-x: auto;
+  border-radius: var(--radius-sm);
+}
+
+.prose pre code {
+  display: block;
+  padding: 18px;
+  font-size: 0.85rem;
+}
+
+.post-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 64px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.post-nav a {
+  display: flex;
+  flex-direction: column;
+  max-width: 48%;
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.post-nav a span {
+  color: var(--text-subtle);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.post-nav-next {
+  margin-left: auto;
+  text-align: right;
+}

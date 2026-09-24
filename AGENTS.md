@@ -174,26 +174,32 @@ Run `npm run lint` to check for issues.
 
 ```bash
 /home/dickyv/repos/portfolio_blog/
+├── private/                # Git-ignored: CV (PDF + HTML), pitch notes, job criteria. Never commit or deploy
 ├── public/
-│   └── posts/              # Blog post markdown files
+│   ├── _redirects          # Netlify SPA fallback
+│   ├── og-image.png        # Social preview image
+│   └── *.png / *.webp      # Project screenshots
 ├── src/
-│   ├── components/         # (optional subdirectory)
-│   ├── App.jsx             # Root component with theme provider
-│   ├── App.css             # Global styles
-│   ├── Blog.jsx            # Blog listing page
-│   ├── Post.jsx            # Single post page
-│   ├── LandingPage.jsx     # Home/landing page
-│   ├── NavBar.jsx          # Navigation component
-│   ├── Footer.jsx          # Footer component
-│   ├── ThemeContext.jsx    # Theme context provider
-│   ├── ThemeSwitch.jsx     # Theme toggle component
-│   ├── ProjectCard.jsx     # Project display card
-│   ├── ErrorPage.jsx       # 404 error page
+│   ├── content/            # All site copy and data (edit these to change what the site says)
+│   │   ├── site.js         # Profile, contact links, stats, principles
+│   │   ├── experience.js   # Current role, police role, case studies
+│   │   ├── projects.js     # Project cards
+│   │   ├── skills.js       # Skill groups
+│   │   ├── about.js        # About paragraphs
+│   │   └── posts.js        # Loads src/posts/*.md at build time
+│   ├── components/         # Header, Footer, CaseStudy, ProjectCard, Icon, etc.
+│   ├── pages/              # Home, Blog, Post, ErrorPage
+│   ├── posts/              # Blog post markdown files
+│   ├── App.jsx             # Layout: header, outlet, footer, hash scrolling
+│   ├── App.css             # Design tokens, base styles, shared utilities
+│   ├── ThemeContext.jsx    # Theme context
+│   ├── ThemeProvider.jsx   # Theme state, persisted to localStorage
+│   ├── useTheme.js         # Hook to consume the theme context
 │   ├── routes.jsx          # Route definitions
-│   ├── main.jsx            # Entry point
-│   └── projectData.js      # Static project data
-├── eslint.config.js        # ESLint configuration
-├── vite.config.js          # Vite configuration
+│   └── main.jsx            # Entry point
+├── index.html              # Meta/OG tags, JSON-LD, pre-paint theme script, fonts
+├── eslint.config.js
+├── vite.config.js
 └── package.json
 ```
 
@@ -220,13 +226,21 @@ useEffect(() => {
 
 ### Theme Switching
 
-- Uses `ThemeContext` with `isDark` boolean
-- CSS uses `[data-theme="dark"]` and `[data-theme="light"]` selectors
-- Check system preference with `window.matchMedia("(prefers-color-scheme: dark)")`
+- `ThemeProvider` exposes `isDark` and `handleToggleTheme`; consume with `useTheme()`
+- The theme is set as `data-theme` on `<html>`; an inline script in `index.html` applies it before first paint
+- CSS tokens live in `App.css` under `:root` and `[data-theme="dark"]`
+- The preference is saved to `localStorage`, falling back to `prefers-color-scheme`
+
+### Content
+
+- Site copy lives in `src/content/`, not in components
+- Use `**bold**` inside content strings; `Emphasis` renders it
+- Never name the current employer, its products or clients, or dates for ongoing work: the repo is public
+- The CV is not published on the site; contact is by email, with the CV sent on request
 
 ### Markdown Blog Posts
 
-- Posts stored as `.md` files in `/public/posts/`
-- Index file (`index.txt`) lists all post filenames
-- Use `react-markdown` with `remark-gfm` for GitHub-flavored markdown
-- Use `highlight.js` for code syntax highlighting
+- Posts are `.md` files in `src/posts/`, loaded with `import.meta.glob` (no index file)
+- Each post starts with a `## Title` line and an `_date_` line
+- Slugs come from filenames; newest filename sorts first
+- Use `react-markdown` with `remark-gfm`, and `highlight.js` for code blocks

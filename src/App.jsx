@@ -1,28 +1,36 @@
+import { useEffect } from "react";
+import { Outlet, useLocation } from "react-router-dom";
+import PropTypes from "prop-types";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 import "./App.css";
-import NavBar from "./NavBar";
-import Footer from "./Footer";
-import { Outlet } from "react-router";
-import { useState } from "react";
-import ThemeSwitch from "./ThemeSwitch";
-import ThemeContext from "./ThemeContext";
 
-function App() {
-  const preference = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  const [isDark, setIsDark] = useState(preference);
+const App = ({ children }) => {
+  const { pathname, hash } = useLocation();
+
+  useEffect(() => {
+    if (!hash) {
+      window.scrollTo(0, 0);
+      return;
+    }
+    const target = document.getElementById(hash.slice(1));
+    if (target) target.scrollIntoView({ behavior: "smooth" });
+  }, [pathname, hash]);
+
   return (
-    <ThemeContext.Provider value={{ isDark }}>
-      <div className="App" data-theme={isDark ? "dark" : "light"}>
-        <NavBar />
-        <ThemeSwitch
-          isChecked={isDark}
-          handleChange={() => setIsDark(!isDark)}
-        />
-        <Outlet />
-
-        <Footer isDark={isDark} />
-      </div>
-    </ThemeContext.Provider>
+    <div className="app">
+      <a className="skip-link" href="#main">
+        Skip to content
+      </a>
+      <Header />
+      {children ?? <Outlet />}
+      <Footer />
+    </div>
   );
-}
+};
+
+App.propTypes = {
+  children: PropTypes.node,
+};
 
 export default App;

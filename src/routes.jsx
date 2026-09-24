@@ -1,21 +1,23 @@
 import App from "./App";
-import Blog from "./Blog";
-import ErrorPage from "./ErrorPage";
-import LandingPage from "./LandingPage";
+import Blog from "./pages/Blog";
+import ErrorPage from "./pages/ErrorPage";
+import Home from "./pages/Home";
+import Post from "./pages/Post";
+
 const routes = [
   {
     path: "/",
     element: <App />,
-    errorElement: <ErrorPage />,
+    errorElement: (
+      <App>
+        <ErrorPage />
+      </App>
+    ),
     children: [
-      {
-        path: "/",
-        element: <LandingPage />,
-      },
-      {
-        path: "/blog",
-        element: <Blog />,
-      },
+      { index: true, element: <Home /> },
+      { path: "blog", element: <Blog /> },
+      { path: "blog/:slug", element: <Post /> },
+      { path: "*", element: <ErrorPage /> },
     ],
   },
 ];
