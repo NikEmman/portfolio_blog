@@ -229,7 +229,8 @@ useEffect(() => {
 - `ThemeProvider` exposes `isDark` and `handleToggleTheme`; consume with `useTheme()`
 - The theme is set as `data-theme` on `<html>`; an inline script in `index.html` applies it before first paint
 - CSS tokens live in `App.css` under `:root` and `[data-theme="dark"]`
-- The preference is saved to `localStorage`, falling back to `prefers-color-scheme`
+- The preference is saved to `localStorage` only when the visitor toggles; until then the site follows `prefers-color-scheme` live
+- Toggling uses the View Transitions API to reveal the new theme as a circle from the toggle; browsers without it get a short colour fade (`.theme-fade`), and reduced-motion users get an instant switch
 
 ### Content
 

@@ -15,6 +15,7 @@ const navItems = [
 const Header = () => {
   const { isDark, handleToggleTheme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [hasToggledTheme, setHasToggledTheme] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -22,6 +23,11 @@ const Header = () => {
   }, [location]);
 
   const handleToggleMenu = () => setIsMenuOpen((current) => !current);
+
+  const handleThemeClick = (event) => {
+    setHasToggledTheme(true);
+    handleToggleTheme(event);
+  };
 
   return (
     <header className="site-header">
@@ -51,10 +57,15 @@ const Header = () => {
           <button
             type="button"
             className="icon-button"
-            onClick={handleToggleTheme}
+            onClick={handleThemeClick}
             aria-label={isDark ? "Switch to light theme" : "Switch to dark theme"}
           >
-            <Icon name={isDark ? "sun" : "moon"} />
+            <span
+              key={isDark ? "sun" : "moon"}
+              className={`theme-icon${hasToggledTheme ? " is-animated" : ""}`}
+            >
+              <Icon name={isDark ? "sun" : "moon"} />
+            </span>
           </button>
           <Link className="button button-small" to="/#contact">
             Contact
