@@ -3,6 +3,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import PropTypes from "prop-types";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 import "./App.css";
 
 const App = ({ children }) => {
@@ -25,6 +26,7 @@ const App = ({ children }) => {
       <Header />
       {children ?? <Outlet />}
       <Footer />
+      <ScrollToTop />
     </div>
   );
 };

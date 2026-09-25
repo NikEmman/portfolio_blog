@@ -19,6 +19,12 @@ const strokePaths = {
       <path d="m11 6-6 6 6 6" />
     </>
   ),
+  arrowUp: (
+    <>
+      <path d="M12 19V5" />
+      <path d="m6 11 6-6 6 6" />
+    </>
+  ),
   sun: (
     <>
       <circle cx="12" cy="12" r="4" />
